@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="three.min.js"></script>
+    <script src="vanta.halo.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ball_container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <img src="magic_ball.png" id="magic_ball" class="magic_ball" alt="Описание картинки">
+        <div class="triangle" id="triangle"></div>
+        <div class="prediction" id="prediction">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </div>
+    </div>
+    <script type="module" src="http_service.js"></script>
+    <script type="module" src="./models/UiAction.js"></script>
+    <script type="module" src="./models/UiEvent.js"></script>
+    <script type="module" src="./models/UiState.js"></script>
+    <script type="module" src="controller.js"></script>
+    <script type="module" src="presentation.js"></script>
+</body>
+
+<script>
+    const height = window.innerHeight;
+    VANTA.HALO({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        size: 1.0,
+        minHeight: height,
+        minWidth: 200.00
+    });
+</script>
+</html>
