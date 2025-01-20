@@ -110,8 +110,9 @@ body{
     text-align: start;
     font-family: 'Arial', sans-serif;
     position: absolute;
+    top:8%;
+
     z-index: 5;
-    margin-bottom: 150vw;
 }
 
 .form_wrapper{
