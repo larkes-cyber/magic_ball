@@ -10,10 +10,20 @@
 </head>
 
 <body>
-    <div class="ball_container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <img src="magic_ball.png" id="magic_ball" class="magic_ball" alt="Описание картинки">
-        <div class="triangle" id="triangle"></div>
-        <div class="prediction" id="prediction">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </div>
+    <div class="wrapper">
+        <div class="ball_container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <img src="magic_ball.png" id="magic_ball" class="magic_ball" alt="Описание картинки">
+            <div class="triangle" id="triangle"></div>
+            <div class="prediction" id="prediction"></div>
+            <div class="form_wrapper">
+                <textarea type="text" class="textfield" id="text_field" placeholder="Ask the ball about the future..."></textarea>
+                <div class="description_text">
+                    Enter your worriest question and click on the ball you will see the asnwer ✨✨✨ <br>
+                    Or you can just click, the ball will read your mind 🧙‍♂️
+                </div>
+            </div>
+            <h1 class="site_title">The magic ball <br> of predictions</h1>
+        </div>
     </div>
     <script type="module" src="http_service.js"></script>
     <script type="module" src="./models/UiAction.js"></script>

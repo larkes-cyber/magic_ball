@@ -8,7 +8,7 @@ body{
     background-color: #131a43;
 }
 .magic_ball {
-    width: 100%;
+    width: 80vw;
     height: auto;
     user-select: none;
     transition: all 0.3s ease;
@@ -17,7 +17,6 @@ body{
 .ball_container{
     margin: 0 auto;
     max-width: 95%;
-    height: auto;
     z-index: 1;
     position: absolute;
     display: flex; /* Включаем Flexbox */
@@ -35,7 +34,7 @@ body{
     border-top: 24vw solid #0511F2; /* Верхняя сторона треугольника (синий цвет) */
        filter: drop-shadow(0 20px 30px rgba(5, 17, 242, 0.9)) 
             drop-shadow(0 -20px 30px rgba(5, 17, 242, 0.9));
-    z-index: 2;
+    z-index: 12;
     position: absolute;
     transition: all 1s ease; /* Плавная анимация */
 
@@ -51,7 +50,7 @@ body{
     letter-spacing: 2px;
     line-height: 6vw;
     font-family: 'Roboto', sans-serif;
-    z-index: 3;
+    z-index: 13;
     position: absolute;
     transform: translateY(10%);
     margin: 0 auto;
@@ -67,11 +66,64 @@ body{
     100% { transform: translateY(20px); }
 }
 
-.shake_infinive {
-    animation: shake 0.4s ease-in-out infinite;
+.form_wrapper{
+    position: absolute;
+    z-index: 4;
+    margin-top: 150vw;
+    width: 100%;
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание по центру */
 }
 
-.shake_normal{
-    animation: shake 0.4s ease-in-out 2;
+.textfield {
+    padding: 15px 20px;
+    font-size: 4.3vw;  /* Более крупный шрифт */
+    font-family: 'Arial', sans-serif;  /* Красивый шрифт */
+    border: none;
+    border-radius: 8px;
+    width: 80%;
+    height: 15vw;
+    outline: none;  /* Убираем обводку при фокусе */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Легкая тень */
+    transition: all 0.3s ease;
+    color: #333;  /* Темный цвет для текста */
+    background-color: white;  /* Белый фон для поля ввода */
 }
 
+/* Эффект при фокусе на поле ввода */
+.textfield:focus {
+    border: 2px solid #0036a1;  /* Синий контур при фокусе */
+    box-shadow: 0 0 10px rgba(0, 54, 161, 0.3);  /* Тень при фокусе */
+}
+
+/* Место для текста подсказки */
+.textfield::placeholder {
+    color: #888;  /* Цвет текста подсказки */
+    font-style: italic;  /* Курсив для текста подсказки */
+}
+
+.site_title{
+    margin: 0 auto;
+    font-size: 12.3vw;
+    color: #fff;
+    text-align: start;
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    z-index: 5;
+    margin-bottom: 150vw;
+}
+
+.form_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.description_text{
+    margin-top: 6vw;
+    font-size: 3.3vw;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}

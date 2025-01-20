@@ -9,6 +9,7 @@ const controller = new Controller();
 const ball = document.getElementById('magic_ball');
 const triangle = document.getElementById('triangle');
 const prediction = document.getElementById('prediction');
+const textField = document.getElementById("text_field");
 const triangleWidth = 30
 const triangleHeight = 24
 
@@ -106,7 +107,8 @@ controller.onActionChange((action) => {
             showPrediction(false, 0);
             expandTriangle(false, 0, () => {
                 setShowListener(() => {
-                    controller.onEvent(UiEvent.BallClicked);
+                    controller.onEvent(UiEvent.BallClicked, textField.value);
+                    textField.value = "";
                 });
             });
             break;
@@ -116,6 +118,7 @@ controller.onActionChange((action) => {
 })
 
 setShowListener((() => {
-    controller.onEvent(UiEvent.BallClicked);
+    controller.onEvent(UiEvent.BallClicked, textField.value);
+    textField.value = "";
 }));
 

@@ -11,12 +11,11 @@ class Controller{
     action = UiAction.None;
     
 
-    onEvent(event){
+    onEvent(event, params = null){
         switch (event) {
             case UiEvent.BallClicked:
                 this.performAction(UiAction.StartShaking);
-                
-                this.httpService.sendPrompt(null).then((result) => {
+                this.httpService.sendPrompt(params.length == 0 ? null : params).then((result) => {
                     this.performAction(UiAction.EndShaking);
                     this.performStateChange(new UiState(result));
                   }).catch((error) => {

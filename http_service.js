@@ -1,14 +1,12 @@
 class HttpService{
 
-    url = "http://0.0.0.0:8000"
+    url = "https://txsndk-62-118-133-112.ru.tuna.am"
 
     async sendPrompt(question) {
         try {
           const response = await fetch(`${this.url}/get_prediction`, {
             method: 'POST', // Метод запроса
-            headers: {
-              'Content-Type': 'application/json' // Указываем тип данных
-            },
+            headers: {"Accept": "application/json", "Content-type": "application/json"},
             body: JSON.stringify({
                 question:question
             })
