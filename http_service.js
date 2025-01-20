@@ -1,11 +1,12 @@
 class HttpService{
 
-    url = "https://txsndk-62-118-133-112.ru.tuna.am"
+    url = "https://w1hcrkzfvc.loclx.io"
 
     async sendPrompt(question) {
         try {
-          const response = await fetch(`${this.url}/get_prediction`, {
-            method: 'POST', // Метод запроса
+          console.log("request started")
+          const response = await fetch(`${this.url}/get_pediction`, {
+            method: 'POST',
             headers: {"Accept": "application/json", "Content-type": "application/json"},
             body: JSON.stringify({
                 question:question
