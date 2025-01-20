@@ -1,6 +1,6 @@
 class HttpService{
 
-    url = "https://0gnqtq0fw1.loclx.io"
+    url = "https://hsfvypq379.loclx.io"
 
     async sendPrompt(question) {
       const controller = new AbortController();  // Создаем контроллер для отмены запроса
