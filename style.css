@@ -8,7 +8,7 @@ body{
     background-color: #131a43;
 }
 .magic_ball {
-    width: 80vw;
+    width: 90vw;
     height: auto;
     user-select: none;
     transition: all 0.3s ease;
@@ -69,7 +69,7 @@ body{
 .form_wrapper{
     position: absolute;
     z-index: 4;
-    margin-top: 150vw;
+    bottom: 7%;
     width: 100%;
     display: flex; /* Включаем Flexbox */
     justify-content: center; /* Горизонтальное выравнивание по центру */
