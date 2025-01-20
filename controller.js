@@ -14,12 +14,17 @@ class Controller{
     onEvent(event, params = null){
         switch (event) {
             case UiEvent.BallClicked:
+
+                const localCases = ['Yes', 'No', 'Maybe', 'Ask later...', 'Never', 'Absolutely']
+
                 this.performAction(UiAction.StartShaking);
                 this.httpService.sendPrompt(params.length == 0 ? null : params).then((result) => {
+                    console.log("here is isisisisi")
                     this.performAction(UiAction.EndShaking);
                     this.performStateChange(new UiState(result));
                   }).catch((error) => {
-                    console.log(error);
+                    this.performAction(UiAction.EndShaking);
+                    this.performStateChange(new UiState(localCases[Math.floor(Math.random() * localCases.length)]));
                   });
 
                 break;
